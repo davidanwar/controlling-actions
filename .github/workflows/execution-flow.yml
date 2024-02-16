@@ -79,8 +79,4 @@ jobs:
   report:
     needs: [lint, deploy]
     if: failure()
-    runs-on: ubuntu-latest
-    steps:
-      - name: Report Failure
-        run: |
-          echo "Something Wrong"
+    uses: ./.github/workflows/reuseable.yml

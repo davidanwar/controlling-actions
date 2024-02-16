@@ -1,0 +1,9 @@
+name: Reuseable Workflow
+on: workflow_call
+jobs:
+  report:
+    runs-on: ubuntu-lates
+    steps:
+      - name: Report Failure
+        run: |
+          echo "Something Wrong"
